@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Nathanphotos</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+		<title>Nathan's Photos</title>
+		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<header>
+		<h1>Photos by Nathan</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><%= link_to 'Galleries', galleries_path %></li>
+			<li>Services</li>
+			<li>About Us</li>
+			<li>Contact Us</li>
+		</ul>
+	</nav>
+	<body>
+		<%= yield %>
+	</body>
+	<footer>
+		<p>&copy; Photos by Nathan 2012</p>
+	</footer>
 </html>
