@@ -4,4 +4,6 @@ class Photograph < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   belongs_to :gallery
+
+  default_scope order('created_at desc')
 end
