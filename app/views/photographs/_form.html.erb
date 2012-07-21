@@ -1,0 +1,13 @@
+<%= form_for @photo do |f| %>
+	<legend><%= form_title %></legend>
+	<fieldset>
+		<div>
+			<%= f.label :image, 'Image' %>
+			<%= f.file_field :image %>
+		</div>
+
+		<div class="form-actions">
+			<%= f.submit form_submit %> or <%= link_to 'Cancel', photographs_path %>
+		</div>
+	</fieldset>
+<% end %>

@@ -1,6 +1,9 @@
 <h2>Photographs</h2>
+
+<%= link_to 'New photo', new_photograph_path %>
+
 <% @photos.each do |photo| %>
 	<div>
-		photo
+		<%= image_tag photo.image_url(:thumb) if photo.image? %>
 	</div>
 <% end %>

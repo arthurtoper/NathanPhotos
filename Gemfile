@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'mini_magick'
 gem 'carrierwave'
 
 # To use ActiveModel has_secure_password

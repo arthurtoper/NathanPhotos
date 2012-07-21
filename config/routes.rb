@@ -1,5 +1,9 @@
 Nathanphotos::Application.routes.draw do
 	root to: 'photographs#index'
+
+
+	resources :photographs
+
 	# The priority is based upon order of creation:
 	# first created -> highest priority.
 
