@@ -3,5 +3,5 @@ class Gallery < ActiveRecord::Base
 
   validates :name, presence: true
 
-  has_many :photographs
+  has_many :photographs, dependent: :destroy
 end
