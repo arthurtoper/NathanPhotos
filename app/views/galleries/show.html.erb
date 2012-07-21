@@ -1,0 +1,13 @@
+<h2><%= @gallery.name %></h2>
+<% if @gallery.description.present? %>
+	<p><%= @gallery.description %></p>
+<% end %>
+
+<%= link_to 'New photo', new_gallery_photograph_path(@gallery) %>
+
+<% @gallery.photographs.each do |photo| %>
+	<div>
+		<%= image_tag photo.image_url(:thumb) if photo.image? %>
+		<p><%= link_to 'Edit', edit_gallery_photograph_path(@gallery, photo) %> - <%= link_to 'Delete', photo, method: :delete %></p>
+	</div>
+<% end %>

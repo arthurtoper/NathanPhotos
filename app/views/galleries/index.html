@@ -1,0 +1,7 @@
+<h2>Galleries</h2>
+<p><%= link_to 'New Gallery', new_gallery_path %></p>
+<% @galleries.each do |gallery| %>
+	<div>
+		<h3><%= link_to gallery.name, gallery %></h3>
+	</div>
+<% end %>
