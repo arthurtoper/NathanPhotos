@@ -4,4 +4,6 @@ Nathanphotos::Application.routes.draw do
 	resources :galleries do
 		resources :photographs, except: [:index]
 	end
+
+	resources :services
 end
