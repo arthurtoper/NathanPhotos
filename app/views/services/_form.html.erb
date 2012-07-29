@@ -1,0 +1,23 @@
+<%= form_for @service do |f| %>
+	<legend><%= form_title %></legend>
+	<fieldset>
+		<div>
+			<%= f.label :name, 'Name' %>
+			<%= f.text_field :name %>
+		</div>
+
+		<div>
+			<%= f.label :description, 'Description' %>
+			<%= f.text_area :description %>
+		</div>
+
+		<div>
+			<%= f.label :price, 'Price' %>
+			<%= f.text_field :price %>
+		</div>
+
+		<div class="form-actions">
+			<%= f.submit form_submit %> or <%= link_to 'Cancel', galleries_path %>
+		</div>
+	</fieldset>
+<% end %>
