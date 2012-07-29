@@ -1,5 +1,7 @@
 Nathanphotos::Application.routes.draw do
-	root to: 'galleries#index'
+	root to: 'site#index'
+	get 'about' => 'site#about', as: :about
+	get 'contact' => 'site#contact', as: :contact
 
 	resources :galleries do
 		resources :photographs, except: [:index]
