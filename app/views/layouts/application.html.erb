@@ -2,26 +2,32 @@
 <html>
 	<head>
 		<title>Nathan's Photos</title>
-		<%= stylesheet_link_tag "application", :media => "all" %>
+		<link href="http://fonts.googleapis.com/css?family=Lusitana" rel="stylesheet" type="text/css" />
+		<%= stylesheet_link_tag "application" %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
-	<header>
-		<h1>Photos by Nathan</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><%= link_to 'Home', root_path %></li>
-			<li><%= link_to 'Galleries', galleries_path %></li>
-			<li><%= link_to 'Services', services_path %></li>
-			<li><%= link_to 'About Us', about_path %></li>
-			<li><%= link_to 'Contact Us', contact_path %></li>
-		</ul>
-	</nav>
 	<body>
-		<%= yield %>
+		<header>
+			<h1>Photos by Nathan</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><%= link_to 'Home', root_path %></li>
+				<li><%= link_to 'Galleries', galleries_path %></li>
+				<li><%= link_to 'Services', services_path %></li>
+				<li><%= link_to 'About Us', about_path %></li>
+				<li><%= link_to 'Contact Us', contact_path %></li>
+			</ul>
+		</nav>
+		
+		<article>
+			<%= yield %>
+		</article>
+		
+		<footer>
+			<p>&copy; Photos by Nathan 2012</p>
+		</footer>
 	</body>
-	<footer>
-		<p>&copy; Photos by Nathan 2012</p>
-	</footer>
 </html>

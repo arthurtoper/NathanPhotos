@@ -1,0 +1,49 @@
+body { font-family: "Lusitana", serif; background-color: #171717; }
+
+header, article { background-color: #d7d7d7; color: #171717; margin: 0; }
+nav, footer { background-color: #171717; color: #d7d7d7; margin: 0; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+header {
+	padding: 1em 1.5em;
+
+	font-size: 200%;
+}
+
+nav {
+	padding: 0.5em 1em;
+
+	>ul {
+		@include horizontal-list-container;
+		>li { 
+			@include horizontal-list-item;
+			margin: 0 2em;
+		}
+	}
+
+	a { color: #ddf; text-decoration: none; font-size: 150%; }
+	a:hover { text-shadow: 0 0 5px white; color: white; }
+}
+
+article {
+	min-height: 20em;
+	padding: 3em;
+
+	h2 { margin-bottom : 1em; }
+ 
+	p { margin: 0; }
+
+	a { color: #22b; text-decoration: none; }
+	a:hover { text-shadow: 0 0 3px #88f; color: #44d; }
+}
+
+footer {
+	padding: 1em 4.5em;
+
+	font-size: 75%;
+
+	p { margin: 0; }
+
+	letter-spacing: 0.35em;
+}

@@ -1,0 +1,7 @@
+nav {
+	@include full;
+	@include alpha;
+}
+header { @include full; }
+article { @include full; }
+footer { @include full; }
