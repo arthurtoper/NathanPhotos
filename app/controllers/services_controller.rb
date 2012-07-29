@@ -19,4 +19,17 @@ class ServicesController < ApplicationController
 	def show
 		@service = Service.find params[:id]
 	end
+
+	def edit
+		@service = Service.find params[:id]
+	end
+
+	def update
+		@service = Service.find params[:id]
+		if @service.update_attributes(params[:service])
+			redirect_to services_url
+		else
+			render :edit
+		end
+	end
 end
