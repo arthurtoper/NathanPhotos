@@ -1,35 +1,37 @@
-body { font-family: "Lusitana", serif; background-color: #171717; }
+body { font-family: helvetica, arial, serif; background-color: #000; }
 
-header, article { background-color: #d7d7d7; color: #171717; margin: 0; }
-nav, footer { background-color: #171717; color: #d7d7d7; margin: 0; }
+header, article { background-color: #000; color: #fff; margin: 0; width: 1024px; margin: 0 auto;}
+nav, footer { background-color: #000; color: #fff; margin: 0; }
 
-h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal;}
 
 header {
-	padding: 1em 1.5em;
-
-	font-size: 200%;
+	padding-top: 15px;
+	font-size: 110%;
 }
 
 nav {
-	padding: 0.5em 1em;
-
+	width: 1024px; margin: 0 auto;	
 	>ul {
 		@include horizontal-list-container;
+		border-top: 1px solid #878787;
+		padding-top: 5px;
+		padding-bottom: 5px;
+
 		>li { 
 			@include horizontal-list-item;
-			margin: 0 2em;
+			margin-right: 1em;
 		}
 	}
 
-	a { color: #ddf; text-decoration: none; font-size: 150%; }
-	a:hover { text-shadow: 0 0 5px white; color: white; }
+	a { color: #d8d8d8; text-decoration: none; font-size: 75%; text-transform: uppercase;}
+	a:hover { text-shadow: 0 0 5px red; color: white; }
 }
 
 article {
 	min-height: 20em;
-	padding: 3em;
-
+	width: 1024px;
+	margin: 0 auto;
 	h2 { margin-bottom : 1em; }
  
 	p { margin: 0; }
@@ -39,11 +41,13 @@ article {
 }
 
 footer {
-	padding: 1em 4.5em;
+	border-top: 1px solid #878787;
+	width: 1024px;
+	margin: 10px auto;
+	padding-top: 5px;
+	font-size: 65%;
 
-	font-size: 75%;
+	p { margin: 0; color: #d8d8d8; text-transform: uppercase; text-align: right;}
 
-	p { margin: 0; }
 
-	letter-spacing: 0.35em;
 }
