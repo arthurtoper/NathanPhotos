@@ -38,5 +38,6 @@ class GalleriesController < ApplicationController
 	def show
 		@galleries = Gallery.all
 		@gallery = Gallery.find params[:id]
+		redirect_to [@gallery, @gallery.photographs.first] if @gallery.photographs.any?
 	end
 end

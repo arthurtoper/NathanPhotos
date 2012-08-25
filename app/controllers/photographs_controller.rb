@@ -38,6 +38,8 @@ class PhotographsController < ApplicationController
 	end
 
 	def show
+		@galleries = Gallery.all
+		@gallery = Gallery.find params[:gallery_id]
 		@photo = Photograph.find params[:id]
 	end
 end

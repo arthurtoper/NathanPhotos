@@ -11,3 +11,7 @@
 nav { @include span-columns(12); }
 article { @include span-columns(12); }
 footer { @include span-columns(12); }
+
+.intro { @include span-columns(12); }
+.feature { @include span-columns(9); }
+.thumbs { @include span-columns(3 omega); }

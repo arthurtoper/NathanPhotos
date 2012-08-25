@@ -1,0 +1,32 @@
+<div class="subnav">
+	<ul>
+		<% @galleries.each do |gallery| %>
+			<li><%= link_to gallery.name, gallery, class: (gallery == @gallery ? 'current' : '') %></li>
+		<% end %>
+		<li><%= link_to 'New Gallery', new_gallery_path, class: 'action' %></li>
+	</ul>
+</div>
+
+<div class="intro">
+	<h2><%= @gallery.name %></h2>
+	<% if @gallery.description.present? %>
+		<p><%= @gallery.description %></p>
+	<% end %>
+
+	<%= link_to 'New photo', new_gallery_photograph_path(@gallery), class: 'action' %>
+</div>
+
+<div class="feature">
+	<p class="frame">
+		<%= image_tag @photo.image_url(:large) %>
+	</p>
+</div>
+
+<div class="thumbs">
+	<% @gallery.photographs.each do |photo| %>
+		<div<%= ' class="current"'.html_safe if photo == @photo %>>
+			<%= link_to image_tag(photo.image_url(:thumb)), [@gallery, photo] if photo.image? %>
+			<p><%= link_to 'Edit', edit_gallery_photograph_path(@gallery, photo), class: 'action' %> - <%= link_to 'Delete', [@gallery, photo], method: :delete, class: 'action' %></p>
+		</div>
+	<% end %>
+</div>

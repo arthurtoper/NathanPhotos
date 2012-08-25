@@ -30,7 +30,7 @@ nav, .subnav {
 		}
 	}
 
-	a { color: $fore; text-decoration: none; font-size: 75%; text-transform: uppercase;}
+	a { color: $fore; text-decoration: none; font-size: 75%; text-transform: uppercase; }
 	a:hover { color: $high; }
 	a.current { text-decoration: underline; }
 }
@@ -43,8 +43,9 @@ article {
  
 	p { margin: 0; }
 
-	a { color: #22b; text-decoration: none; }
-	a:hover { text-shadow: 0 0 3px #88f; color: #44d; }
+	a { color: $fore; text-decoration: none; font-size: 75%; text-transform: uppercase; }
+	a:hover { color: $high; }
+	a.action { color: $action; }
 }
 
 footer {
@@ -57,4 +58,14 @@ footer {
 	p { margin: 0; color: $fore; text-transform: uppercase; text-align: right;}
 }
 
-a.action { color: $action;}
+
+.frame { text-align: center; }
+.feature {
+	padding: 20px 0;
+}
+
+.thumbs {
+	text-align: center;
+	div { padding: 10px; margin: 10px 0; }
+	.current { border: 1px dotted $line; }
+}
