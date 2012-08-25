@@ -61,11 +61,12 @@ footer {
 
 .frame { text-align: center; }
 .feature {
-	padding: 20px 0;
+	padding: 15px 0;
 }
 
 .thumbs {
 	text-align: center;
-	div { padding: 10px; margin: 10px 0; }
+	div { padding: 5px; margin: 10px 0; }
 	.current { border: 1px dotted $line; }
+	img { vertical-align: bottom; }
 }

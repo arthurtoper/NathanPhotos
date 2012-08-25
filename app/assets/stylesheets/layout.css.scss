@@ -1,11 +1,3 @@
-// nav {
-// 	@include full;
-// 	@include alpha;
-// }
-// header { @include full; }
-// article { @include full; }
-// footer { @include full; }
-
 .page { @include container; }
 
 nav { @include span-columns(12); }
@@ -13,5 +5,5 @@ article { @include span-columns(12); }
 footer { @include span-columns(12); }
 
 .intro { @include span-columns(12); }
-.feature { @include span-columns(9); }
-.thumbs { @include span-columns(3 omega); }
+.feature { @include span-columns(11); }
+.thumbs { @include span-columns(1 omega); }
