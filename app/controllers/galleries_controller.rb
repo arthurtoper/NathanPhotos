@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
 	def index
-		@galleries = Gallery.all
+		redirect_to Gallery.first if Gallery.any?
 	end
 
 	def new
@@ -36,6 +36,7 @@ class GalleriesController < ApplicationController
 	end
 
 	def show
+		@galleries = Gallery.all
 		@gallery = Gallery.find params[:id]
 	end
 end

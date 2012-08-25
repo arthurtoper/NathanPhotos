@@ -1,7 +1,13 @@
-body { font-family: helvetica, arial, serif; background-color: #000; }
+$fore: #d8d8d8;
+$high: white;
+$back: black;
+$line: #878787;
+$action: #eaa;
 
-header, article { background-color: #000; color: #fff; margin: 0; width: 1024px; margin: 0 auto;}
-nav, footer { background-color: #000; color: #fff; margin: 0; }
+body { font-family: helvetica, arial, serif; background-color: $back; }
+
+header, article { color: $high; margin: 0; width: 1024px; margin: 0 auto;}
+nav, footer { color: $high; margin: 0; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal;}
 
@@ -10,11 +16,11 @@ header {
 	font-size: 110%;
 }
 
-nav {
+nav, .subnav {
 	width: 1024px; margin: 0 auto;	
 	>ul {
 		@include horizontal-list-container;
-		border-top: 1px solid #878787;
+		border-top: 1px solid $line;
 		padding-top: 5px;
 		padding-bottom: 5px;
 
@@ -24,8 +30,9 @@ nav {
 		}
 	}
 
-	a { color: #d8d8d8; text-decoration: none; font-size: 75%; text-transform: uppercase;}
-	a:hover { text-shadow: 0 0 5px red; color: white; }
+	a { color: $fore; text-decoration: none; font-size: 75%; text-transform: uppercase;}
+	a:hover { color: $high; }
+	a.current { text-decoration: underline; }
 }
 
 article {
@@ -41,13 +48,13 @@ article {
 }
 
 footer {
-	border-top: 1px solid #878787;
+	border-top: 1px solid $line;
 	width: 1024px;
 	margin: 10px auto;
 	padding-top: 5px;
 	font-size: 65%;
 
-	p { margin: 0; color: #d8d8d8; text-transform: uppercase; text-align: right;}
-
-
+	p { margin: 0; color: $fore; text-transform: uppercase; text-align: right;}
 }
+
+a.action { color: $action;}

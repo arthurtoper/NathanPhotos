@@ -1,7 +1,13 @@
-nav {
-	@include full;
-	@include alpha;
-}
-header { @include full; }
-article { @include full; }
-footer { @include full; }
+// nav {
+// 	@include full;
+// 	@include alpha;
+// }
+// header { @include full; }
+// article { @include full; }
+// footer { @include full; }
+
+.page { @include container; }
+
+nav { @include span-columns(12); }
+article { @include span-columns(12); }
+footer { @include span-columns(12); }

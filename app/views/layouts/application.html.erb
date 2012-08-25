@@ -9,25 +9,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
-		<header>
-			<img src="/assets/nt_logo.png" height="75" />
-		</header>
-		<nav>
-			<ul>
-				<li><%= link_to 'Home', root_path %></li>
-				<li><%= link_to 'Galleries', galleries_path %></li>
-				<li><%= link_to 'Services', services_path %></li>
-				<li><%= link_to 'About Us', about_path %></li>
-				<li><%= link_to 'Contact Us', contact_path %></li>
-			</ul>
-		</nav>
-		
-		<article>
-			<%= yield %>
-		</article>
-		
-		<footer>
-			<p>&copy; Photos by Nathan 2012</p>
-		</footer>
+		<div class="page">
+			<header>
+				<img src="/assets/nt_logo.png" height="75" />
+			</header>
+			<nav>
+				<ul>
+					<li><%= link_to 'Home', root_path %></li>
+					<li><%= link_to 'Galleries', galleries_path %></li>
+					<li><%= link_to 'Services', services_path %></li>
+					<li><%= link_to 'About Us', about_path %></li>
+					<li><%= link_to 'Contact Us', contact_path %></li>
+				</ul>
+			</nav>
+			
+			<article>
+				<%= yield %>
+			</article>
+			
+			<footer>
+				<p>&copy; Photos by Nathan 2012</p>
+			</footer>
+		</div>
 	</body>
 </html>

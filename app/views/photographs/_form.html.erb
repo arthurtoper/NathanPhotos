@@ -1,5 +1,6 @@
 <%= form_for [@gallery, @photo] do |f| %>
 	<legend><%= form_title %></legend>
+	<p><%= @photo.errors.inspect %></p>
 	<fieldset>
 		<div>
 			<%= f.label :image, 'Image' %>

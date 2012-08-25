@@ -36,4 +36,8 @@ class PhotographsController < ApplicationController
 		@photo.destroy
 		redirect_to @gallery
 	end
+
+	def show
+		@photo = Photograph.find params[:id]
+	end
 end

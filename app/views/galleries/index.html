@@ -1,10 +1,4 @@
 
 <p><%= link_to 'New Gallery', new_gallery_path %></p>
 
-<% @galleries.each do |gallery| %>
-	<div>
-		<h3><%= link_to gallery.name, gallery %></h3>
-		<%= link_to image_tag(gallery.image.image_url(:thumb)), gallery if gallery.image.present? %>
-		<p><%= link_to 'Edit', edit_gallery_path(gallery) %> - <%= link_to 'Delete', gallery, method: :delete %></p>
-	</div>
-<% end %>
+<p>No Galleries have been created yet.</p>
