@@ -1,2 +1,6 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :galleries %>
+<% end %>
+
 <h1>New Gallery</h1>
 <%= render 'form', form_title: 'New Gallery', form_submit: 'Create' %>

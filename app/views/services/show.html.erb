@@ -1,3 +1,7 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :services %>
+<% end %>
+
 <p><%= link_to 'Back to Services', services_path %></p>
 
 <h2><%= @service.name %></h2>

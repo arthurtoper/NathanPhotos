@@ -1,2 +1,6 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :galleries %>
+<% end %>
+
 <h1>Edit Photograph</h1>
 <%= render 'form', form_title: 'Edit Photograph', form_submit: 'Update' %>

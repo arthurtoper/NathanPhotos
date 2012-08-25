@@ -1,3 +1,7 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :galleries %>
+<% end %>
+
 <div class="subnav">
 	<ul>
 		<% @galleries.each do |gallery| %>

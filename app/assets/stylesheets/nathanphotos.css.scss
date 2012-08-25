@@ -6,10 +6,10 @@ $action: #eaa;
 
 body { font-family: helvetica, arial, serif; background-color: $back; }
 
-header, article { color: $high; margin: 0; width: 1024px; margin: 0 auto;}
+header, article { color: $high; margin: 0 auto; }
 nav, footer { color: $high; margin: 0; }
 
-h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal;}
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal; }
 
 header {
 	padding-top: 15px;

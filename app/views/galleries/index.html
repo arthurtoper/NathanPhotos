@@ -1,3 +1,7 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :galleries %>
+<% end %>
+
 <p><%= link_to 'New Gallery', new_gallery_path %></p>
 
 <p>No Galleries have been created yet.</p>

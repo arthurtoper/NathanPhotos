@@ -1,2 +1,6 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :services %>
+<% end %>
+
 <h1>New Service</h1>
 <%= render 'form', form_title: 'New Service', form_submit: 'Create' %>
