@@ -7,4 +7,7 @@ class SiteController < ApplicationController
 
 	def contact
 	end
+
+	def weddings
+	end
 end
