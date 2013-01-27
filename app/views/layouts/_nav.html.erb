@@ -1,10 +1,9 @@
 <nav>
 	<ul>
 		<li><%= link_to 'Home', root_path, class: (page == :home ? 'current' : '') %></li>
-		<li><%= link_to 'Weddings', weddings_path, class: (page == :weddings ? 'current' : '') %></li>
 		<li><%= link_to 'Galleries', galleries_path, class: (page == :galleries ? 'current' : '') %></li>
-		<li><%= link_to 'Services', services_path, class: (page == :services ? 'current' : '') %></li>
-		<li><%= link_to 'About Us', about_path, class: (page == :about ? 'current' : '') %></li>
-		<li><%= link_to 'Contact Us', contact_path, class: (page == :contact ? 'current' : '') %></li>
+		<li><%= link_to 'Weddings', packages_path, class: (page == :packages ? 'current' : '') %></li>
+		<li><%= link_to 'About', about_path, class: (page == :about ? 'current' : '') %></li>
+		<li><%= link_to 'Contact', contact_path, class: (page == :contact ? 'current' : '') %></li>
 	</ul>
 </nav>

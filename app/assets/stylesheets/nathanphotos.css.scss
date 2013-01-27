@@ -3,7 +3,20 @@ $high: white;
 $back: black;
 $line: #878787;
 $action: #eaa;
+$light-grey: #eaeaea;
+.right-float {
+	float: right;
+}
+.left-float {
+	float: left;
+}
 
+.half-width {
+	width: 500px;
+}
+.clear {
+	clear: both;
+}
 body { font-family: helvetica, arial, serif; background-color: $back; }
 
 header, article { color: $high; margin: 0 auto; }
@@ -14,15 +27,114 @@ h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal; }
 header {
 	padding-top: 15px;
 	font-size: 110%;
+	width: 1024px;
+	/*border-bottom: 1px solid #575757;*/
+
+	h1 {
+		width: 175px;
+		float: left;
+		a { color: $high; text-decoration: none; }
+	}
+
+	.contact-info {
+
+		font-size: 65%;
+		text-align: right;
+		margin-top: 15px;
+		color: $fore;
+
+		span {
+			display: block;
+		}
+
+		.phone-and-email {
+			margin-right: 5px;
+			margin-top: 5px;
+			float: left;
+		}
+
+		.social {
+			float: right;
+			margin-top: 7px;
+			a {
+				margin-left: 7px;
+				float: right;
+
+				&#twitter-link {
+					background: url('/assets/twitter-icon-doubled.png') no-repeat;
+					width: 25px;
+					height: 25px;
+					margin-top: -1px
+
+				}
+				&#facebook-link {
+					background: url('/assets/facebook-icon-doubled.png') no-repeat;
+					width: 23px;
+					height: 23px;
+
+				}
+
+				&:hover {
+					background-position: bottom!important;
+
+				}
+			}
+
+		}
+	}
 }
 
-nav, .subnav {
-	width: 1024px; margin: 0 auto;	
-	>ul {
+nav {
+	width: 550px;
+	margin-top: 25px;
+	margin-left: 45px;
+
+	ul {
+		
 		@include horizontal-list-container;
-		border-top: 1px solid $line;
-		padding-top: 5px;
+
+
+		
+		li {
+			
+			@include horizontal-list-item;
+
+			a {
+				text-decoration: none;
+				color: #5f6776;
+				text-transform: uppercase;
+				font-size: 90%;
+				float: left;
+				margin-left: 30px;
+
+				&.current, &:hover {
+					color: $fore;
+					text-decoration: none;
+					-webkit-transition: 100ms linear 0s;
+					-moz-transition: 100ms linear 0s;
+					-o-transition: 100ms linear 0s;
+					transition: 100ms linear 0s;
+					outline: 0 none;
+
+					/*text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;*/
+				}
+			}
+
+		}
+	}
+}
+
+/*
+nav, .subnav {
+	width: 1024px; 
+	margin: 0px auto 10px auto;
+
+	>ul {
+
+		@include horizontal-list-container;
+		padding-top: 10px;
 		padding-bottom: 5px;
+		margin-bottom: 15px;
 
 		>li { 
 			@include horizontal-list-item;
@@ -30,10 +142,11 @@ nav, .subnav {
 		}
 	}
 
-	a { color: $fore; text-decoration: none; font-size: 75%; text-transform: uppercase; }
+	a { color: $fore; text-decoration: none; font-size: 75%; text-transform: uppercase; float: left;}
 	a:hover { color: $high; }
 	a.current { text-decoration: underline; }
 }
+*/
 
 article {
 	min-height: 20em;
@@ -49,13 +162,13 @@ article {
 }
 
 footer {
-	border-top: 1px solid $line;
+	border-top: 1px solid #575757;
 	width: 1024px;
-	margin: 10px auto;
+	margin: 20px auto 10px auto;
 	padding-top: 5px;
 	font-size: 65%;
 
-	p { margin: 0; color: $fore; text-transform: uppercase; text-align: right;}
+	p { margin: 0; color: $fore; text-transform: uppercase; text-align: center;}
 }
 
 
@@ -70,3 +183,91 @@ footer {
 	.current { border: 1px dotted $line; }
 	img { vertical-align: bottom; }
 }
+
+
+.site {
+	article {
+		margin-top: 25px;
+	}
+}
+
+.site.index {
+
+	article {
+		padding-bottom: 25px;
+
+		img {
+			border: 1px solid #575757;
+		}
+
+		.box {
+
+			/*border-radius: 10px;*/
+			padding: 20px;
+			border-top: 1px solid #575757;
+			border-bottom: 1px solid #575757;
+			margin-bottom: 17px;
+			h3 {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+
+			p {
+				text-align: justify;
+				color: $fore;
+				line-height: 1.5em;
+				font-size: 90%;
+				margin-bottom: 15px;
+
+				a {
+					text-transform:none;
+					font-size: 100%;
+					text-decoration: underline;
+					font-weight: bold;
+					color: #fff;
+				}
+
+
+			}
+		}
+	}
+}
+
+
+.site.packages {
+
+	img {
+
+	}
+	article {
+
+		h3 {
+			margin-bottom: 5px;
+		}
+
+		p {
+			margin-bottom: 25px;
+			font-size: 85%;
+			text-align: justify;
+			line-height: 1.5em;
+			color: $fore;
+		}
+
+		ul {
+			margin:0;padding:0;
+			margin-left: 20px;
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

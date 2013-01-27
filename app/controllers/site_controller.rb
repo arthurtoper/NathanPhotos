@@ -10,4 +10,7 @@ class SiteController < ApplicationController
 
 	def weddings
 	end
+
+	def packages
+	end
 end

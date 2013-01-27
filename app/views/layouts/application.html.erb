@@ -8,20 +8,35 @@
 		<%= csrf_meta_tags %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
-	<body>
+	<body class="<%= controller.controller_name %> <%= controller.action_name %>">
 		<div class="page">
 			<header>
-				<img src="/assets/nt_logo.png" height="75" />
-			</header>
+				<h1><%= link_to image_tag('/assets/logo-2.png', width: 175, alt: 'Photos by Nathan'), root_url %></h1>
 
 			<%= yield :nav %>
+
+
+				<div class="right-float contact-info">
+					<div class="phone-and-email">
+						<span>t: 07791 294587</span>
+						<span>e: info@nathantoper.com</span>
+					</div>
+
+					<div class="social">
+						<%= link_to '', 'https://twitter.com/Nate_Toper', title: 'Twitter', id: 'twitter-link' %>
+						<%= link_to '', 'http://www.facebook.com/nathantoperphotography', title: 'Facebook', id: 'facebook-link' %>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+
 			
 			<article>
 				<%= yield %>
 			</article>
 			
 			<footer>
-				<p>&copy; Photos by Nathan 2012</p>
+				<p>&copy; Photos by Nathan <%= Time.now.year %></p>
 			</footer>
 		</div>
 	</body>
