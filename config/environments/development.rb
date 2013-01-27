@@ -34,4 +34,8 @@ Nathanphotos::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  $admin_username = 'admin'
+  $admin_password = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'
+
 end

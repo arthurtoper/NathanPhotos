@@ -5,10 +5,15 @@ Nathanphotos::Application.routes.draw do
 	get 'contact' => 'site#contact', as: :contact
 	get 'weddings' => 'site#weddings', as: :weddings
 	get 'packages' => 'site#packages', as: :packages
+	get 'admin' => 'site#admin', as: :admin
 
 	resources :galleries do
 		resources :photographs, except: [:index]
 	end
 
 	resources :services
+
+  	post "admin/login" => "admin#login", :as => :admin_login
+  	get "admin/logout" => "admin#logout", :as => :admin_logout
+
 end

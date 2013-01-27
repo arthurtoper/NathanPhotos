@@ -1,4 +1,7 @@
 class SiteController < ApplicationController
+	
+	skip_before_filter :redirect_unless_admin
+
 	def index
 	end
 

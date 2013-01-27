@@ -1,6 +1,9 @@
 class GalleriesController < ApplicationController
+
+	skip_before_filter :redirect_unless_admin, :only => [:index, :show]
+
 	def index
-		redirect_to Gallery.first if Gallery.any?
+		# redirect_to Gallery.first if Gallery.any?
 	end
 
 	def new
