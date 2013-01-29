@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Gallery.create(name: "Weddings")
+Gallery.create(name: "Engagements")
+Gallery.create(name: "Anniversaries")
+Gallery.create(name: "Events")

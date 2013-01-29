@@ -11,6 +11,8 @@ Nathanphotos::Application.routes.draw do
 		resources :photographs, except: [:index]
 	end
 
+	get 'admin/galleries' => 'galleries#admin_index', as: :admin_galleries
+
 	resources :services
 
   	post "admin/login" => "admin#login", :as => :admin_login

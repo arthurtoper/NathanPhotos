@@ -6,6 +6,10 @@ class GalleriesController < ApplicationController
 		# redirect_to Gallery.first if Gallery.any?
 	end
 
+	def admin_index
+		@galleries = Gallery.all
+	end
+
 	def new
 		@gallery = Gallery.new
 	end

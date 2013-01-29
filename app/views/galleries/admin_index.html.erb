@@ -1,0 +1,10 @@
+<% content_for :nav do %>
+	<%= render 'layouts/nav', page: :admin_galleries %>
+<% end %>
+<h2>Manage Galleries</h2>
+
+<ul>
+<% @galleries.each do |gallery| %>
+	<li><%= link_to gallery.name, edit_gallery_path(gallery) %></li>
+<% end %>
+</ul>

@@ -3,7 +3,10 @@
 <% end %>
 
 <% if @user_is_admin %>
-	hurrah!
+	<h2>Admin</h2>
+	<ul>
+		<li><%= link_to 'Manage Galleries', admin_galleries_path %></li>
+	</ul>
 <% else %>
 
 	<h2>Log In</h2>
