@@ -16,6 +16,16 @@ Nathanphotos::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "joshuatoper",
+    :password             => "dannyglover",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
@@ -38,4 +48,5 @@ Nathanphotos::Application.configure do
   $admin_username = 'admin'
   $admin_password = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'
 
+  $nathan_enquiry_address = 'josh@unomee.com'
 end
