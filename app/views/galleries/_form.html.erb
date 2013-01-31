@@ -1,6 +1,6 @@
-<%= form_for @gallery do |f| %>
-	<legend><%= form_title %></legend>
+<%= form_for(prepare_gallery(@gallery), html: {class: 'admin'}) do |f| %>
 	<fieldset>
+		<legend><%= form_title %></legend>
 		<div>
 			<%= f.label :name, 'Name' %>
 			<%= f.text_field :name %>
@@ -10,9 +10,26 @@
 			<%= f.label :description, 'Description (optional)' %>
 			<%= f.text_area :description %>
 		</div>
+		<% value_count = 1 %>
+		<%= f.fields_for :photographs do |ff| %>
+			<% unless ff.object.new_record? %>
+				<div class="record">
+					<%= ff.label :image, "Image #{value_count}" %>
+					<%= image_tag ff.object.image.url(:thumb) %>
+				</div>
+
+			<% else %>
+				<div>
+					<%= ff.label :image, "Image #{value_count}" %>
+					<%= ff.file_field :image %>
+				</div>
+			<% end %>
+			<% value_count += 1 %>
+
+		<% end %>
 
 		<div class="form-actions">
-			<%= f.submit form_submit %> or <%= link_to 'Cancel', galleries_path %>
+			<%= f.submit form_submit %> or <%= link_to 'Cancel', admin_galleries_path %>
 		</div>
 	</fieldset>
 <% end %>

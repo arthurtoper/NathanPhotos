@@ -13,6 +13,8 @@ Nathanphotos::Application.routes.draw do
 
 	get 'admin/galleries' => 'galleries#admin_index', as: :admin_galleries
 
+	get 'galleries/:tag' => 'galleries#show', as: :gallery
+
 	resources :services
 
   	post "admin/login" => "admin#login", :as => :admin_login

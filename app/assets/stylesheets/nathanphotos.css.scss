@@ -167,8 +167,13 @@ footer {
 	margin: 20px auto 10px auto;
 	padding-top: 5px;
 	font-size: 65%;
+	text-align: center;
 
-	p { margin: 0; color: $fore; text-transform: uppercase; text-align: center;}
+	p { margin: 0; color: $fore; text-transform: uppercase; margin-bottom: 10px;}
+
+	a {
+		color: $fore;
+	}
 }
 
 
@@ -262,8 +267,25 @@ footer {
 }
 
 
+.galleries.index, .galleries.show {
+	article {
+		margin-top: 25px;
+	}
+}
+
+.galleries.show {
+	.top {
 
 
+
+		a.back-link {
+			float: right;
+			margin-top: 12px;
+			background: url('/assets/link-back-arrow.png') no-repeat left 2.5px;
+			padding-left: 15px;
+		}
+	}
+}
 
 
 

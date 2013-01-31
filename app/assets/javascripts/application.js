@@ -13,3 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+ $(document).ready(function() {
+
+	$('.bar3').mosaic({
+		animation	:	'slide',	//fade or slide
+		anchor_y	:	'top'		//Vertical anchor position
+	});
+
+	$('.bar2').mosaic({
+		animation	:	'slide',	//fade or slide
+	});
+
+
+ });

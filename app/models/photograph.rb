@@ -5,5 +5,5 @@ class Photograph < ActiveRecord::Base
 
   belongs_to :gallery
 
-  default_scope order('created_at desc')
+  default_scope order('created_at asc')
 end

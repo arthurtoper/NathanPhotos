@@ -2,22 +2,7 @@
 	<%= render 'layouts/nav', page: :galleries %>
 <% end %>
 
-<div class="subnav">
-	<ul>
-		<% @galleries.each do |gallery| %>
-			<li><%= link_to gallery.name, gallery, class: (gallery == @gallery ? 'current' : '') %></li>
-		<% end %>
-		<li><%= link_to 'New Gallery', new_gallery_path, class: 'action' %></li>
-	</ul>
-</div>
-
-<div class="intro">
+<div class="top">
+	<%= link_to 'back to galleries index', galleries_path, class: 'back-link' %>
 	<h2><%= @gallery.name %></h2>
-	<% if @gallery.description.present? %>
-		<p><%= @gallery.description %></p>
-	<% end %>
-
-	<%= link_to 'New photo', new_gallery_photograph_path(@gallery), class: 'action' %>
-
-	<p>This gallery does not contain any photographs.</p>
 </div>

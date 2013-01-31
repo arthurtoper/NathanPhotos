@@ -11,7 +11,10 @@
 
 	<h2>Log In</h2>
 
-	<%= form_tag admin_login_path do %>
+	<%= form_tag(admin_login_path, class: 'admin') do %>
+
+	<fieldset>
+		<legend>Enter your details</legend>
 
 		<div class="field">
 			<%= label_tag :username %>
@@ -23,11 +26,13 @@
 			<%= password_field_tag :password %>
 		</div>
 
-		<div class="field">
+		<div class="field form-actions">
 			<%= submit_tag 'Log In' %>
 		</div>
 		
 		<div class="clear"></div>
+
+	</fieldset>
 
 	<% end %>
 <% end %>

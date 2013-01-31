@@ -3,7 +3,7 @@ class GalleriesController < ApplicationController
 	skip_before_filter :redirect_unless_admin, :only => [:index, :show]
 
 	def index
-		# redirect_to Gallery.first if Gallery.any?
+		@galleries = Gallery.all
 	end
 
 	def admin_index
@@ -30,7 +30,7 @@ class GalleriesController < ApplicationController
 	def update
 		@gallery = Gallery.find params[:id]
 		if @gallery.update_attributes(params[:gallery])
-			redirect_to root_url
+			redirect_to gallery_path(@gallery)
 		else
 			render :edit
 		end
@@ -45,6 +45,6 @@ class GalleriesController < ApplicationController
 	def show
 		@galleries = Gallery.all
 		@gallery = Gallery.find params[:id]
-		redirect_to [@gallery, @gallery.photographs.first] if @gallery.photographs.any?
+		# redirect_to [@gallery, @gallery.photographs.first] if @gallery.photographs.any?
 	end
 end

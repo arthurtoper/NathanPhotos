@@ -1,0 +1,38 @@
+form.admin {
+
+	margin-top: 20px;
+
+	fieldset {
+
+		padding: 15px;
+
+		legend {
+			padding: 0 10px;
+			font-size: 130%;
+		}
+
+		div {
+			font-size: 90%;
+
+			margin-bottom: 15px;
+
+			label {
+				float: left;
+				width: 200px;
+
+				&:after {
+					content: ":"
+				}
+			}
+
+			&.form-actions {
+				margin-left: 200px;
+			}
+		}
+	}
+}
+
+textarea {
+	height: 75px;
+	width: 300px;
+}
