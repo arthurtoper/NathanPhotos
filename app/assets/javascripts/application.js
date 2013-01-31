@@ -33,7 +33,8 @@
 		$("#main-image").fadeIn('100');
 
 		return false;
-	})
+	});
 
 
+				
  });

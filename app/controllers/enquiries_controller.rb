@@ -1,5 +1,7 @@
 class EnquiriesController < ApplicationController
 
+	skip_before_filter :redirect_unless_admin, :only => [:new, :create]
+
 	def new
 		@enquiry = Enquiry.new
 	end

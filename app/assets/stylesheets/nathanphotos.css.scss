@@ -183,10 +183,9 @@ article {
 
 footer {
 	width: 1024px;
-	margin: 20px auto 10px auto;
-	padding-top: 5px;
-	font-size: 5%;
+	margin: 10px auto 10px auto;
 	text-align: center;
+	font-size: 80%;
 
 	p { margin: 0; color: $back; text-transform: uppercase; margin-bottom: 10px;}
 
@@ -204,7 +203,7 @@ footer {
 
 
 
-.site {
+.site, .enquiries {
 	article {
 		margin-top: 25px;
 	}
@@ -221,7 +220,6 @@ footer {
 .site.index {
 
 	article {
-		padding-bottom: 25px;
 
 		img {
 			border: 1px solid #000;
@@ -310,6 +308,7 @@ footer {
 }
 
 .galleries.show {
+
 	.top {
 
 		a.back-link {
@@ -324,35 +323,25 @@ footer {
 	.gallery {
 
 
-		.thumbs {
+
+		.thumbnails {
 			float: right;
-			width: 10%;
-			padding: 1%;
-			padding-top: 0;
-			text-align: right;
+			width: 100px;
+			position:relative;
 
-			.thumb {
-				display: block;
-				margin-bottom: 5px;
-				img {
-					border-radius: 2px;
-					opacity: 0.6
-				}
 
-				&:hover, &.selected, &:focus {
-					img {
-						opacity: 1;
-					}
-				}
-			}
 		}
+		
 
 		.main-image {
 
-			width: 85%
+			width: 85%;
+			float: left;
 
 			img {
-				border-radius: 5px;
+
+
+				border: 2px solid #000;
 			}
 
 		}
@@ -364,8 +353,5 @@ footer {
 	margin-bottom: 25px;
 	background-color:rgba(26,152,62,0.6);
 }
-
-
-
 
 
