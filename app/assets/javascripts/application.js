@@ -25,5 +25,15 @@
 		animation	:	'slide',	//fade or slide
 	});
 
+	$("a.thumb").click(function() {
+		src = $(this).children("img").prop("src").replace('thumb_', 'large_');
+		$("#main-image").fadeOut('100', function() {
+			$("#main-image img").prop("src", src);
+		})
+		$("#main-image").fadeIn('100');
+
+		return false;
+	})
+
 
  });

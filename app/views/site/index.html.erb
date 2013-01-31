@@ -2,18 +2,31 @@
 	<%= render 'layouts/nav', page: :home %>
 <% end %>
 
-<%= image_tag '/assets/placeholders/02.jpeg' %>
+<div class="box">
 
-<div class="right-float half-width">
-
-	<div class="box">
-
-		<h3>A Beautiful Visual Journal of your Special Day</h3>
-
-		<p>Nathan Toper is a wedding photographer based in Cambridgeshire, UK. His passion for photography shines through his modern reportage adaptation of the classic wedding style. He is always happy to <%= link_to 'discuss your needs', contact_path %> and wishes for the day in order to make your wedding photographs very special.</p>
-
-		<p>Let's put some sort of finishing statement here.</p>
+	<div class="left">
+		<%= image_tag '/assets/placeholders/02.jpeg' %>
 	</div>
 
-	<%= image_tag '/assets/placeholders/07.jpeg' %>
+	<div class="right">
+			<h3>A Beautiful Visual Journal of your Special Day</h3>
+
+			<div class="copy">
+				<p>Nathan Toper is a wedding photographer based in Cambridgeshire, UK. His passion for photography shines through his modern reportage adaptation of the classic wedding style.</p>
+
+				<p>He is always happy to <%= link_to 'discuss your needs', contact_path %> and wishes for the day in order to make your wedding photographs very special.</p>
+
+				<p>Let's put some sort of finishing statement here.</p>
+			</div>
+
+
+		<%= image_tag '/assets/placeholders/07.jpeg' %>
+
+
+	</div>
+
+	<div class="clear"></div>
+
+
 </div>
+

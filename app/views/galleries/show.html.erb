@@ -2,7 +2,23 @@
 	<%= render 'layouts/nav', page: :galleries %>
 <% end %>
 
-<div class="top">
-	<%= link_to 'back to galleries index', galleries_path, class: 'back-link' %>
-	<h2><%= @gallery.name %></h2>
+<div class="box">
+
+	<div class="top">
+		<%= link_to 'back to galleries index', galleries_path, class: 'back-link' %>
+		<h2><%= @gallery.name %></h2>
+	</div>
+
+	<div class="gallery">
+		<div class="thumbs">
+			<% @gallery.photographs.each do |photo| %>
+				<%= link_to image_tag(photo.image.url(:thumb)), '#', class: 'thumb' %>
+			<% end %>
+		</div>
+
+		<div class="main-image" id="main-image">
+			<%= image_tag @gallery.photographs.first.image.url(:large) %>
+		</div>
+	</div>
+
 </div>

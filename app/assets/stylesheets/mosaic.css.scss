@@ -25,8 +25,9 @@
 	margin-bottom: 50px;
 	padding: 0!important;
 	background:#111 url(../img/progress.gif) no-repeat center center;
-	border:1px solid #575757;
+	border:1px solid $back;
 	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	border-radius: 5px;
 
 	a{ 
 		text-decoration:none; 

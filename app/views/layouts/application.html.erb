@@ -11,23 +11,25 @@
 	<body class="<%= controller.controller_name %> <%= controller.action_name %>">
 		<div class="page">
 			<header>
-				<h1><%= link_to image_tag('/assets/logo-2.png', width: 175, height: 74, alt: 'Photos by Nathan'), root_url %></h1>
+				<h1><%= link_to image_tag('/assets/logo-3.png', width: 166, height: 70, alt: 'Photos by Nathan'), root_url %></h1>
 
-			<%= yield :nav %>
+				<div class="nav-and-contact">
+					
+					<%= yield :nav %>
 
+					<div class="right-float contact-info">
+						<div class="phone-and-email">
+							<span>t: 07791 294587</span>
+							<span>e: info@nathantoper.com</span>
+						</div>
 
-				<div class="right-float contact-info">
-					<div class="phone-and-email">
-						<span>t: 07791 294587</span>
-						<span>e: info@nathantoper.com</span>
+						<div class="social">
+							<%= link_to '', 'https://twitter.com/Nate_Toper', title: 'Follow me on Twitter', id: 'twitter-link' %>
+							<%= link_to '', 'http://www.facebook.com/nathantoperphotography', title: 'My Facebook page', id: 'facebook-link' %>
+						</div>
 					</div>
-
-					<div class="social">
-						<%= link_to '', 'https://twitter.com/Nate_Toper', title: 'Twitter', id: 'twitter-link' %>
-						<%= link_to '', 'http://www.facebook.com/nathantoperphotography', title: 'Facebook', id: 'facebook-link' %>
-					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="clear"></div>
 			</header>
 
 			

@@ -2,7 +2,7 @@ Nathanphotos::Application.routes.draw do
 	root to: 'site#index'
 	
 	get 'about' => 'site#about', as: :about
-	get 'contact' => 'site#contact', as: :contact
+	get 'contact' => 'enquiries#new', as: :contact
 	get 'weddings' => 'site#weddings', as: :weddings
 	get 'packages' => 'site#packages', as: :packages
 	get 'admin' => 'site#admin', as: :admin
@@ -19,5 +19,7 @@ Nathanphotos::Application.routes.draw do
 
   	post "admin/login" => "admin#login", :as => :admin_login
   	get "admin/logout" => "admin#logout", :as => :admin_logout
+
+  	resources :enquiries
 
 end
