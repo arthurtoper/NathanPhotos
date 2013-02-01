@@ -37,12 +37,26 @@ textarea {
 	width: 300px;
 }
 
-form.contact {
+form.contact, form.login, form.admin {
+
+	fieldset {
+		padding: 20px;
+		legend {
+			padding: 0 5px;
+			font-size: 120%;
+		}
+	}
 
 	.field {
+
+		&.file, &.image {
+			label {
+				margin-top: 2px;
+			}
+		}
 		margin-bottom: 15px;
 
-		input[type=text], textarea {
+		input[type=text], input[type=password], textarea {
 			font-size: 90%;
 			width: 400px;
 			padding: 3px;
@@ -54,7 +68,7 @@ form.contact {
 			}
 		}
 
-		input[type=text] {
+		input[type=text], input[type=password] {
 			height: 30px;
 		}
 		textarea {
