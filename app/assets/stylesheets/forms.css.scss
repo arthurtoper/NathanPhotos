@@ -47,11 +47,24 @@ form.contact, form.login, form.admin {
 		}
 	}
 
+	.existing-image {
+		background: blue;
+		float: left;
+	}
+
 	.field {
 
 		&.file, &.image {
 			label {
 				margin-top: 2px;
+			}
+		}
+
+		&.image {
+			width: 315px;
+			.options {
+				float: right;
+				margin-top: 17px;
 			}
 		}
 		margin-bottom: 15px;

@@ -16,6 +16,10 @@
 				<div class="field record image">
 					<%= ff.label :image, "Image #{value_count}" %>
 					<%= image_tag ff.object.image.url(:thumb) %>
+					<div class="options">
+						Delete?
+						<%= ff.check_box :_destroy %>
+					</div>
 				</div>
 
 			<% else %>
