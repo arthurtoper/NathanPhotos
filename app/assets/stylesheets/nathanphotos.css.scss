@@ -22,6 +22,7 @@ body {
 	/*background-color: $back; */
 	background: url('/assets/01.jpg') no-repeat;
 	background-attachment:fixed;
+	background-size: 100%;
 }
 
 header, article { color: $high; margin: 0 auto; }
