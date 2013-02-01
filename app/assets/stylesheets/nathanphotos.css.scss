@@ -33,7 +33,7 @@ header {
 	padding-top: 15px;
 	font-size: 110%;
 	width: 1024px;
-	margin-top: 25px;
+	margin: 25px 0 25px 0;
 	padding: 15px 0px 0 0px;
 
 	h1 {
@@ -167,6 +167,20 @@ nav, .subnav {
 	a.current { text-decoration: underline; }
 }
 */
+
+article {
+	margin-top: 10px!important;
+}
+
+.breadcrumbs {
+	font-size: 80%;
+	color: #fff;
+	clear: both;
+	margin-top: 90px!important;
+	display: block;
+	float: none;
+
+}
 
 article {
 	min-height: 20em;
@@ -325,23 +339,36 @@ footer {
 
 
 		.thumbnails {
-			float: right;
+			float: left;
 			width: 100px;
 			position:relative;
 
+			a {
+				margin-bottom: 10px;
+				display: block;
+
+				img {
+					border-radius: 2px;
+					opacity: 0.5;
+				}
+
+				&:hover, &.selected {
+
+					img {
+						opacity: 1;
+					}
+				}
+
+			}
 
 		}
 		
 
 		.main-image {
-
-			width: 85%;
 			float: left;
 
 			img {
 
-
-				border: 2px solid #000;
 			}
 
 		}

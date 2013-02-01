@@ -12,14 +12,9 @@
 	<div class="gallery">
 
 		<div class="thumbnails">
-
-			<div id="carousel">
-				<% @gallery.photographs.each do |photo| %>
-					<%= link_to image_tag(photo.image.url(:thumb)), '#', class: 'thumb' %>
-				<% end %>
-
-			</div>
-
+			<% @gallery.photographs.each do |photo| %>
+				<%= link_to image_tag(photo.image.url(:thumb)), '#', class: 'thumb' %>
+			<% end %>
 		</div>
 
 		<div class="main-image" id="main-image">

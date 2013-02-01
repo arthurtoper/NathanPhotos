@@ -3,22 +3,24 @@
 <% end %>
 
 <div class="box">
-<% @galleries.each_with_index do |gallery, i| %>
+<% if @galleries.any? %>	
+	<% @galleries.each_with_index do |gallery, i| %>
 
-<% cl = ' last_in_row' if (i + 1) % 2 == 0 %>
-	<div class="mosaic-block bar2 <%= cl %>">
-		<a href="<%= gallery_path(gallery) %>" class="mosaic-overlay">
-			<div class="details">
-				<h4><%= gallery.name %></h4><br/>
-				<p>sfaspfoamfpoasmopfas</p>
-			</div>
-		</a>
-		<a href="<%= gallery_path(gallery) %>">
-			<div class="mosaic-backdrop">
-				<%= image_tag gallery.photographs.first.image.url(:large) %>
-			</div>
-		</a>
-	</div>
+	<% cl = ' last_in_row' if (i + 1) % 2 == 0 %>
+		<div class="mosaic-block bar2 <%= cl %>">
+			<a href="<%= gallery_path(gallery) %>" class="mosaic-overlay">
+				<div class="details">
+					<h4><%= gallery.name %></h4><br/>
+					<p>sfaspfoamfpoasmopfas</p>
+				</div>
+			</a>
+			<a href="<%= gallery_path(gallery) %>">
+				<div class="mosaic-backdrop">
+					<%= image_tag gallery.photographs.first.image.url(:large) %>
+				</div>
+			</a>
+		</div>
+	<% end %>
 <% end %>
 <div class="clear"></div>
 </div>
