@@ -64,4 +64,11 @@ Nathanphotos::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  $admin_username = 'admin'
+  $admin_password = '1a22ca6b34ec63934a7dd63653c7e672f46493235bbf776f32d4254b51d75e64' #somebollocksfornow
+
+  $nathan_enquiry_address = 'josh@unomee.com'
+
+
 end
