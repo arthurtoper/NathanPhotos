@@ -1,4 +1,4 @@
-.page { width: 1024px; margin: 0 auto;}
+.page { max-width: 1024px; margin: 0 auto;}
 
 nav { @include span-columns(12); }
 article { @include span-columns(12); }
