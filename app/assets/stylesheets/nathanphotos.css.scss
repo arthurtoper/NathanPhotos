@@ -19,8 +19,7 @@ $light-grey: #eaeaea;
 }
 body { 
 	font-family: helvetica, arial, serif; 
-	/*background-color: $back; */
-	background: url('/assets/01.jpg') no-repeat;
+	background: #000 url('/assets/01.jpg') no-repeat;
 	background-attachment:fixed;
 	background-size: 100%;
 }
@@ -311,6 +310,15 @@ footer {
 			margin:0;padding:0;
 			margin-left: 20px;
 		}
+
+		a {
+			text-transform:none;
+			font-size: 100%;
+			text-decoration: underline;
+			font-weight: bold;
+			color: #fff;
+		}
+
 
 	}
 }

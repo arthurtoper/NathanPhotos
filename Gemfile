@@ -34,3 +34,4 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'fog'
 gem 'carrierwave'
+gem "friendly_id"

@@ -1,4 +1,7 @@
 class Gallery < ActiveRecord::Base
+	extend FriendlyId
+	friendly_id :name, use: :slugged
+
 	attr_accessible :description, :name, :photographs_attributes
 
 	validates :name, presence: true
