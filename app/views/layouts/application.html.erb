@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Nathan's Photos</title>
+		<title><%= content_for?(:title) ? yield(:title) + " | Photos by Nathan" : 'Photos by Nathan' %></title>
 		<link href="http://fonts.googleapis.com/css?family=Lusitana" rel="stylesheet" type="text/css" />
 		<%= stylesheet_link_tag "application" %>
 		<%= javascript_include_tag "application" %>

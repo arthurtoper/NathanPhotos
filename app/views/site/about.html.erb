@@ -1,6 +1,11 @@
 <% content_for :nav do %>
 	<%= render 'layouts/nav', page: :about %>
 <% end %>
+<%= content_for :title do %>
+  <%= "About Me" %>
+<% end %>
+
+
 
 <div class="left-float half-width">
 
@@ -14,7 +19,9 @@
 
 		<p>I create a visual journal of your wedding day beautifully presented in an album or book, capturing every special moment throughout the day. From the bride preparing, the groom anxiously anticipating his first glimpse of his soon to be wife, tears from family and friends during speeches and all the little moments that help make the day so perfect. I am always happy to discuss needs, wishes and ideas to ensure you get the exact photos you desire.</p>
 
-		<p>I have experience in a range of photographic areas; <%= link_to 'conceptual artistic works', 'http://portfolio.nathantoper.com/identity.html', target: '_blank' %>, bands and gigs, parties and formal balls, celebrations, <%= link_to 'events', 'http://portfolio.nathantoper.com/canada_day.html', target: '_blank' %>, and <%= link_to 'cosplayers', 'http://portfolio.nathantoper.com/cosplay.html', target: '_blank' %>. I also work digitising film and slides with a professional touch up to correct colours and remove dust and scratches.</p>
+		<p>I have experience in a range of photographic areas; <%= link_to 'conceptual artistic works', 'http://portfolio.nathantoper.com/identity.html', target: '_blank' %>, bands and gigs, parties and formal balls, celebrations, <%= link_to 'events', 'http://portfolio.nathantoper.com/canada_day.html', target: '_blank' %>, and <%= link_to 'cosplayers', 'http://portfolio.nathantoper.com/cosplay.html', target: '_blank' %>.</p>
+
+		<p>I also work digitising film and slides with a professional touch up to correct colours and remove dust and scratches - <%= link_to 'click here for more information', '#' %>.</p>
 
 	</div>
 

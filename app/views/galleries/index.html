@@ -1,6 +1,9 @@
 <% content_for :nav do %>
 	<%= render 'layouts/nav', page: :galleries %>
 <% end %>
+<%= content_for :title do %>
+  <%= "Weddings, Engagements, Parties and more" %>
+<% end %>
 
 <div class="box">
 <% if @galleries.any? %>	
