@@ -16,7 +16,11 @@
 			</a>
 			<a href="<%= gallery_path(gallery) %>">
 				<div class="mosaic-backdrop">
-					<%= image_tag gallery.photographs.first.image.url(:large) %>
+					<% if gallery.photographs.any? %>
+						<%= image_tag gallery.photographs.first.image.url(:large) %>
+					<% else %>
+						<%= image_tag '/assets/no-photos.jpg' %>
+					<% end %>
 				</div>
 			</a>
 		</div>

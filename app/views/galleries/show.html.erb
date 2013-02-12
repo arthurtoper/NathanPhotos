@@ -5,23 +5,40 @@
 <div class="box">
 
 	<div class="top">
-		<%= link_to 'back to galleries index', galleries_path, class: 'back-link' %>
+
+			<%= link_to 'back to galleries index', galleries_path, class: 'back-link' %>
+
 		<h2><%= @gallery.name %></h2>
+
+		<div class="share-icons">
+			Share this page:
+			<span class='st_facebook'></span>
+			<span class='st_twitter'></span>
+			<span class='st_pinterest'></span>
+			<span class='st_email'></span>
+		</div>
+
 	</div>
 
 	<div class="gallery">
 
-		<div class="thumbnails">
-			<% @gallery.photographs.each do |photo| %>
-				<%= link_to image_tag(photo.image.url(:thumb)), '#', class: 'thumb' %>
-			<% end %>
-		</div>
+		<% if @gallery.photographs.any? %>
 
-		<div class="main-image" id="main-image">
-			<%= image_tag @gallery.photographs.first.image.url(:large) %>
-		</div>
+			<div class="thumbnails">
+				<% @gallery.photographs.each do |photo| %>
+					<%= link_to image_tag(photo.image.url(:thumb)), '#', class: 'thumb' %>
+				<% end %>
+			</div>
 
-		<div class="clear"></div>
+			<div class="main-image" id="main-image">
+				<%= image_tag @gallery.photographs.first.image.url(:large) %>
+			</div>
+
+			<div class="clear"></div>
+
+		<% else %>
+			<p>This gallery has no photographs.</p>
+		<% end %>
 	</div>
 
 </div>

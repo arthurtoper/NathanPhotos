@@ -2,37 +2,39 @@
 	<%= render 'layouts/nav', page: :contact %>
 <% end %>
 
-<div class="box">
+<div class="left-float half-width">
+
+	<div class="box">
+
+		<h2>Get in touch!</h2>
+
+		<%= render 'layouts/notice' %>
+
+		<%= form_for(@enquiry, html: {class: 'contact'}) do |f| %>
+
+			<%= validation_errors_for @enquiry %>
+
+			<div class="field">
+				<%= f.label :email_address, "Your email address" %>
+				<%= f.text_field :email_address %>
+			</div>
+
+			<div class="field two-line">
+				<%= f.label :phone_number, "Your phone number (optional)" %>
+				<%= f.text_field :phone_number %>
+			</div>
+
+			<div class="field">
+				<%= f.label :message, "Message" %>
+				<%= f.text_area :message %>
+			</div>
+
+			<div class="field form-actions">
+				<%= f.submit "Submit enquiry" %>
+			</div>
 
 
-	<h2>Get in touch!</h2>
+		<% end %>
 
-	<%= render 'layouts/notice' %>
-
-	<%= form_for(@enquiry, html: {class: 'contact'}) do |f| %>
-
-		<%= validation_errors_for @enquiry %>
-
-		<div class="field">
-			<%= f.label :email_address, "Your email address" %>
-			<%= f.text_field :email_address %>
-		</div>
-
-		<div class="field two-line">
-			<%= f.label :phone_number, "Your phone number (optional)" %>
-			<%= f.text_field :phone_number %>
-		</div>
-
-		<div class="field">
-			<%= f.label :message, "Message" %>
-			<%= f.text_area :message %>
-		</div>
-
-		<div class="field form-actions">
-			<%= f.submit "Submit enquiry" %>
-		</div>
-
-
-	<% end %>
-
+	</div>
 </div>
