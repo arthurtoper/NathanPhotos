@@ -43,6 +43,7 @@ header {
 
 	h1 {
 		width: 175px;
+		margin-top: -2px;
 		float: left;
 		a { color: $high; text-decoration: none; }
 	}
@@ -54,7 +55,9 @@ header {
 		width: 76%;
 		background-color:rgba(0,0,0,0.6);
 		padding: 0 2%;
-		border-radius: 5px;
+		border-radius: 10px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
 		margin-top: 7px;
 
 
@@ -347,6 +350,35 @@ footer {
 		font-weight: 100;
 
 	}
+}
+
+.site.weddings {
+	.right {
+		width: 300px;
+		img {
+			margin-bottom: 13px;
+			border-radius: 0;
+
+			&.first {
+				border-top-right-radius: 10px;
+			}
+			&.last {
+				margin-top: 2px;
+				border-bottom-right-radius: 10px;
+			}
+		}
+	}
+	.left {
+		width: 705px;
+		.box {
+			padding-bottom: 40px;
+			border-radius: 0;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+
+		}
+	}
+
 }
 
 
