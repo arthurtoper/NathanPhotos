@@ -299,6 +299,26 @@ footer {
 	}
 }
 
+.site.about {
+	.box {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		height: 565px;
+
+	}
+
+	.left-float {
+		width: 56%;
+	}
+
+	.right-float {
+		img {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}
+
 
 .site.weddings, .site.about {
 
