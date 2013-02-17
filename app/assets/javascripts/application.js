@@ -26,7 +26,7 @@
 	});
 
 	$("a.thumb").click(function() {
-		src = $(this).children("img").prop("src").replace('thumb_', 'large_');
+		src = $(this).children("img").prop("src").replace('tiny_', 'large_');
 		$("#main-image").fadeOut('100', function() {
 			$("#main-image img").prop("src", src);
 		})

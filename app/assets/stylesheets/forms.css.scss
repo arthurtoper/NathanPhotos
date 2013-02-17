@@ -135,6 +135,7 @@ form.login, form.admin {
 	padding: 10px;
 	margin-bottom: 15px;
 	border-radius: 5px;
+
 	ul {
 		li {
 			margin-bottom: 5px;
@@ -144,13 +145,15 @@ form.login, form.admin {
 
 form.contact {
 
+	font-size: 80%;
+
 	.field {
 
 		margin-bottom: 15px;
 
 		input[type=text], input[type=password], textarea {
-			font-size: 90%;
-			width: 300px;
+			font-size: 80%;
+			width: 220px;
 			padding: 2px;
 			background: #eaeaea;
 			border: 1px solid #888;
@@ -161,7 +164,7 @@ form.contact {
 		}
 
 		input[type=text], input[type=password] {
-			height: 25px;
+			height: 20px;
 		}
 		textarea {
 			height: 100px;
@@ -169,8 +172,8 @@ form.contact {
 		label {
 			color: #d8d8d8;
 			float: left;
-			width: 135px;
-			margin-top: 7px;
+			width: 115px;
+			margin-top: 6px;
 			text-align: right;
 			padding-right: 10px;
 
@@ -181,12 +184,17 @@ form.contact {
 
 		&.two-line {
 			label {
-				margin-top: 1px;
+				margin-top: -2px;
+			}
+		}
+		&.textarea {
+			label {
+				margin-top: 0px;
 			}
 		}
 
 		&.form-actions {
-			margin-left: 145px;
+			margin-left: 125px;
 
 			input {
 

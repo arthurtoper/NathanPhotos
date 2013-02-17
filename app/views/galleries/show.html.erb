@@ -29,7 +29,7 @@
 
 			<div class="thumbnails">
 				<% @gallery.photographs.each do |photo| %>
-					<%= link_to image_tag(photo.image.url(:thumb)), '#', class: 'thumb' %>
+					<%= link_to image_tag(photo.image.url(:tiny)), '#', class: 'thumb' %>
 				<% end %>
 			</div>
 

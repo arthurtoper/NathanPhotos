@@ -2,7 +2,7 @@
 	<%= render 'layouts/nav', page: :contact %>
 <% end %>
 
-<div class="left-float half-width">
+<div class="left-float">
 
 	<div class="box">
 
@@ -24,7 +24,7 @@
 				<%= f.text_field :phone_number %>
 			</div>
 
-			<div class="field">
+			<div class="field textarea">
 				<%= f.label :message, "Message" %>
 				<%= f.text_area :message %>
 			</div>
@@ -37,4 +37,8 @@
 		<% end %>
 
 	</div>
+</div>
+
+<div class="right-float">
+	<%= image_tag '/assets/03-website.jpg', width: 600 %>
 </div>
