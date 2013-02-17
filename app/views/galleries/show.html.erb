@@ -2,7 +2,7 @@
 	<%= render 'layouts/nav', page: :galleries %>
 <% end %>
 <%= content_for :title do %>
-  <%= "Weddings, Engagements, Parties and more" %>
+  <%= "#{@gallery.name}" %>
 <% end %>
 
 <div class="box">
