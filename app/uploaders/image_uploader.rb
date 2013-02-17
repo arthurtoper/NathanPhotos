@@ -16,7 +16,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 	end
 
 	version :medium do
-		process :resize_to_fill => [463, 218]
+		process :resize_to_fill => [463, 218, 'North']
 	end
 
 	version :large do
