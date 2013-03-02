@@ -28,8 +28,9 @@
 		<% if @gallery.photographs.any? %>
 
 			<div class="thumbnails">
-				<% @gallery.photographs.each do |photo| %>
-					<%= link_to image_tag(photo.image.url(:tiny)), '#', class: 'thumb' %>
+				<% @gallery.photographs.each_with_index do |photo, index| %>
+					<% css_class = 'selected' if index == 0 %>
+					<%= link_to image_tag(photo.image.url(:tiny)), '#', class: "thumb #{css_class}" %>
 				<% end %>
 			</div>
 

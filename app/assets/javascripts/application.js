@@ -26,11 +26,17 @@
 	});
 
 	$("a.thumb").click(function() {
+
+		$('.thumbnails a.selected').removeClass('selected');
+		
+		$(this).addClass('selected');
+		
 		src = $(this).children("img").prop("src").replace('tiny_', 'large_');
+		
 		$("#main-image").fadeOut('100', function() {
 			$("#main-image img").prop("src", src);
 		});
-		
+
 		$("#main-image").fadeIn('100');
 
 		return false;
