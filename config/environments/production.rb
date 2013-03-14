@@ -70,5 +70,4 @@ Nathanphotos::Application.configure do
 
   $nathan_enquiry_address = 'josh@unomee.com'
 
-
 end
