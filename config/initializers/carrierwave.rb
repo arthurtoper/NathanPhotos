@@ -9,9 +9,9 @@ end
 
 if Rails.env.development?
 	CarrierWave.configure do |config|
-		# config.storage = :file
-		config.storage = :fog
-		config.fog_directory = 'nathanphotos'
+		config.storage = :file
+		# config.storage = :fog
+		# config.fog_directory = 'nathanphotos'
 	end
 elsif Rails.env.test?
 	CarrierWave.configure do |config|
