@@ -20,6 +20,20 @@ Nathanphotos::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  ActionMailer::Base.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+    :address              => "mail.nathantoper.com",
+    :port                 => 26,
+    :domain               => "nathantoper.com",
+    :user_name            => "info@nathantoper.com",
+    :password             => "nt250288",
+    :authentication       => "plain",
+    :enable_starttls_auto => true,
+    :openssl_verify_mode => 'none'
+  }
+
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
