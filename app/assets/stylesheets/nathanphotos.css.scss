@@ -42,10 +42,21 @@ header {
 	padding: 15px 0px 0 0px;
 
 	h1 {
-		width: 175px;
 		margin-top: -2px;
+		width: 175px;
 		float: left;
-		a { color: $high; text-decoration: none; }
+		a { 
+			color: $high; 
+			text-decoration: none; 
+			width: 175px;
+			background: url('/assets/logo-3.png') no-repeat;
+			float: left;
+
+			height: 70px;
+		}
+		text-indent: 100%;
+    	white-space: nowrap;
+    	overflow: hidden;
 	}
 
 	.nav-and-contact {
